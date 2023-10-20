@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>moban</title>
+</head>
+<body>
+<!--变量-->
+{{ name }} - {{ age }} - {{ like.2 }} - {{ address.province }}
+<!--标签-->
+{% if age > 10 and name == "zs" %}
+    ok
+{% elif name in "zhangsans" %}
+    not
+{% else %}
+    yes
+{% endif %}
+{% for i in like %}
+    {{ i }} - {{ forloop.counter0 }} - {{ forloop.counter }} - {{ forloop.revcounter0 }} - {{ forloop.revcounter }}
+    {% if forloop.first %}
+        - first
+    {% elif forloop.last %}
+        - last
+    {% endif %}
+{% endfor %}
+<br>
+{% for i in stars %}
+    {% for j in i %}
+        -{{ j }}
+    {% endfor %}
+{% endfor %}
+</body>
+</html>

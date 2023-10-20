@@ -1,0 +1,6 @@
+{% extends "block.html" %}
+
+{% block content %}
+    child {{ block.super }}
+    {% include "other.html" %}
+{% endblock %}

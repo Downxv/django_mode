@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "runoob.css" %}">
+</head>
+<body>
+    <h1>{{ hello }}</h1>
+    <h1>{{ name.0 }}</h1>
+    <h1>{{ name.1 }}</h1>
+    <h1>{{ name.2 }}</h1>
+    <h1>{{ type.x }}</h1>
+    <h1>{{ type.y }} {{ name|length }}</h1>
+    <a href="{% url 'hello' %}">反向解析路由</a>
+    <a href="{% url 'user_app:sub' %}">命名空间反向解析路由</a>
+    <a href="{% url 'user_app:chuancan' 1 2 'zhangsan' %}">命名空间反向解析路由并传参</a>
+    <a href="{% url 'user_app:chongdinxiang' %}">视图函数使用重定向和反向解析</a>
+</body>
+</html>
